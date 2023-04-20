@@ -25,11 +25,11 @@ const Weather = () => {
         
         <div className="mui--text-center">
             <Appbar><h1>Weather</h1></Appbar> 
-            <Textarea type='text' value={city} onChange={e => setCity(e.target.value)} placeholder='Enter the city'/>
+            <Textarea type='text' value={city} onChange={e => setCity(e.target.value)} placeholder='Enter the city' />
         <Button onClick={fetchData} color="primary">Search</Button>  
         <div>
             {data && (
-                <Container>
+                <Container style={{backgroundColor: 'deepskyblue'}}>
                     <h1>{data.name}, {data.sys.country}</h1>
                     <div>{Math.round(data.main.temp)} C</div>
                     <div>
